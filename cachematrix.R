@@ -13,23 +13,23 @@ makeCacheMatrix <- function(x = matrix()) {
         }
         get <- function(), x
         setMatrix <- function(solve) a <<- solve
-        getMatrix <- function (), a
-        list(set=set, get=get,
-             setMatrix=setMatrix,
-             getMatrix=getMatrix)
+        getMatrix <- function ()
+        getMatrix <- (int[] r, int[] c) 
+        list(setMatrix = getMatrix)
 }
 ## Write a short comment describing this function
 ## In this case it is solving a matrix by getting the function getmatrix and then assigning solve to get the inverse of the matrix. One it is solved the end of the matrix is set. 
 
 
 cacheSolve <- function(x, ...) {
-a <- x$getmatrix()
-if(!is.null(a))
-message("recibiendo datos cache")
-return(a)
+        a <- x$getMatrix()
+        if(!is.null(a)) {
+                message("getting cached data")
+                return(a)
+        }
+        data <- x$getMatrix()
+        m <- solve(data, ...)
+        x$setMatrix(a)
+        a
 }
-matrix<- x$get()
-a <- solve(matrix, ...)
-x$setmatrix(a)
-a
 }
