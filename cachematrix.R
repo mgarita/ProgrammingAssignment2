@@ -11,7 +11,7 @@ makeCacheMatrix <- function(x = matrix()) {
                 x <<-y
                 a <<- NULL
         }
-        get <- function(), x
+        get <- function() x
         setMatrix <- function(solve) a <<- solve
         getMatrix <- function ()
         getMatrix <- (int[] r, int[] c) 
